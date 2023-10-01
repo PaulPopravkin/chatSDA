@@ -1,6 +1,9 @@
 # OSX
 .DS_STORE
 
+# Idea
+.idea
+
 # Models
 models/
 
@@ -131,7 +134,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env
 .venv
 env/
 venv/
