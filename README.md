@@ -7,6 +7,8 @@ Ask questions to your documents without an internet connection, using the power 
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [LlamaIndex](https://www.llamaindex.ai/), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
 
+# Python 3.11 is required for use!
+
 # Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
 
@@ -27,12 +29,7 @@ poetry shell
 Then, download the LLM model and place it in a directory of your choice:
 - LLM: default to [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
 
-Copy the `example.env` template into `.env`
-```shell
-cp example.env .env
-```
-
-and edit the variables appropriately in the `.env` file.
+Edit the variables appropriately in the `.env` file if needed.
 ```
 MODEL_TYPE: supports LlamaCpp or GPT4All
 PERSIST_DIRECTORY: is the folder you want your vectorstore in
@@ -68,6 +65,12 @@ The supported extensions are:
    - `.pptx` : PowerPoint Document,
    - `.ppt` : PowerPoint Document,
    - `.txt`: Text file (UTF-8),
+
+Run the following command to prepare dataset.
+
+```shell
+python prepare_dataset.py
+```
 
 Run the following command to ingest all the data.
 
